@@ -1,0 +1,12 @@
+1.	保留原本的宿主机nginx的html下的文件，日后要修改.php文件请到虚拟机中修改
+	并且如果添加了其他.php结尾的文件，需要在宿主机中也有；虚拟机不用存储非.php文件
+	最好的解决方式其实是挂载宿主机和虚拟机的目录，这样只存一份即可。
+	
+2.	更改nginx配置文件，下载压缩包，压缩包里面的nginx配置文件里有注释，这里在宿主机里放php文件的位置是
+	/var/www/html目录。今后要更高.php文件都在这里改动才会生效，宿主机改动不会生效！
+
+3.	为虚拟机安装php-fpm以及php-mysqli、php-curl等相关依赖，并且配置php-fpm监听的地址、端口以及
+	配置要连接的数据库的mysqld.sock文件，确保phpMyAdmin能够在与php-fpm交互时顺利连接数据库
+	
+4.	nginx压缩包和/etc/php/{version}/fpm/php.ini配置也已上传，需要改动
+	phpMyAdmin的config.default.php配置文件中要改动一下连接数据库的ip为localhost
