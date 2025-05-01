@@ -62,7 +62,7 @@
 
 ### 一、VMWare在NAT模式下的网络拓扑图
 
-![VMWareNAT网络拓扑结构](pictures/VMNAT.JPG)
+![VMWareNAT网络拓扑结构](pictures/VMNAT.jpg)
 
 *如上图所示，转自知乎*
 
